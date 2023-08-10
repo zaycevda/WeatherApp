@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CurrentWeatherMCVStyle">
+        <item name="shapeAppearanceOverlay">@style/CurrentWeatherMCVShapeStyle</item>
+        <item name="cardBackgroundColor">@color/blue</item>
+        <item name="strokeColor">@color/transparent</item>
+        <item name="strokeWidth">@dimen/no_stroke</item>
+    </style>
+
+    <style name="WeatherMCVStyle">
+        <item name="shapeAppearanceOverlay">@style/WeatherMCVShapeStyle</item>
+        <item name="cardBackgroundColor">@color/gray1</item>
+        <item name="strokeColor">@color/transparent</item>
+        <item name="strokeWidth">@dimen/no_stroke</item>
+    </style>
+
+    <style name="CurrentWeatherMCVShapeStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/no_shape</item>
+        <item name="cornerSizeTopLeft">@dimen/no_shape</item>
+        <item name="cornerSizeBottomRight">@dimen/current_weather_mcv_corners_shape</item>
+        <item name="cornerSizeBottomLeft">@dimen/current_weather_mcv_corners_shape</item>
+    </style>
+
+    <style name="WeatherMCVShapeStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/weather_mcv_corners_shape</item>
+        <item name="cornerSizeTopLeft">@dimen/weather_mcv_corners_shape</item>
+        <item name="cornerSizeBottomRight">@dimen/weather_mcv_corners_shape</item>
+        <item name="cornerSizeBottomLeft">@dimen/weather_mcv_corners_shape</item>
+    </style>
+</resources>

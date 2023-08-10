@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- shape -->
+    <dimen name="no_shape">0dp</dimen>
+    <dimen name="current_weather_mcv_corners_shape">16dp</dimen>
+    <dimen name="weather_mcv_corners_shape">8dp</dimen>
+
+    <!-- space -->
+    <dimen name="space2dp">2dp</dimen>
+    <dimen name="space6dp">6dp</dimen>
+    <dimen name="space8dp">8dp</dimen>
+    <dimen name="space12dp">12dp</dimen>
+    <dimen name="space16dp">16dp</dimen>
+    <dimen name="space24dp">24dp</dimen>
+    <dimen name="space32dp">32dp</dimen>
+
+    <!-- size -->
+    <dimen name="no_stroke">0dp</dimen>
+</resources>
