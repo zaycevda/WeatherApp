@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/gray2"
     android:orientation="vertical"
-    tools:context=".ui.screen.MainActivity">
+    tools:context=".app.ui.screen.MainActivity">
 
     <com.google.android.material.card.MaterialCardView
         style="@style/CurrentWeatherMCVStyle"
@@ -52,7 +52,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_temp"
                 tools:src="@mipmap/ic_launcher" />
 
-            <com.example.weatherapp.ui.custom.WeatherItemView
+            <com.example.weatherapp.app.ui.custom.WeatherItemView
                 android:id="@+id/wiv_wind_speed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 app:title="@string/wind_speed"
                 tools:data="4.87" />
 
-            <com.example.weatherapp.ui.custom.WeatherItemView
+            <com.example.weatherapp.app.ui.custom.WeatherItemView
                 android:id="@+id/wiv_humidity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                 app:title="@string/humidity"
                 tools:data="80" />
 
-            <com.example.weatherapp.ui.custom.WeatherItemView
+            <com.example.weatherapp.app.ui.custom.WeatherItemView
                 android:id="@+id/wiv_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
