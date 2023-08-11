@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.example.weatherapp.R
 import com.example.weatherapp.databinding.ItemDayBinding
 import com.example.weatherapp.domain.model.Weather
+import kotlin.math.roundToInt
 
 class DaysAdapter : RecyclerView.Adapter<DaysAdapter.ViewHolder>() {
     private val differ = AsyncListDiffer(this, DiffUtilCallback())
@@ -28,7 +29,7 @@ class DaysAdapter : RecyclerView.Adapter<DaysAdapter.ViewHolder>() {
             val date = weather.date
             val day = weather.day
             val condition = day.condition
-            val humidity = day.humidity.toString()
+            val humidity = day.humidity.roundToInt().toString()
             val temp = day.temp.toString()
             val windSpeed = day.windSpeed.toString()
             val description = condition.description

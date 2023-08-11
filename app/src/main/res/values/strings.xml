@@ -2,17 +2,17 @@
 
     <!-- dynamic -->
     <string name="date">%s</string>
-    <string name="weather_wind_speed">%s м/с</string>
-    <string name="weather_temp">%s°C</string>
     <string name="weather_description">%s</string>
     <string name="weather_humidity">%s%%</string>
+    <string name="weather_temp">%s°C</string>
     <string name="weather_title">%s</string>
+    <string name="weather_wind_speed">%s k/h</string>
 
     <!-- static -->
     <string name="app_name">WeatherApp</string>
-    <string name="city">Москва</string>
-    <string name="condition">Температура</string>
-    <string name="description">Описание</string>
-    <string name="humidity">Влажность</string>
-    <string name="wind_speed">Скорость ветра</string>
+    <string name="city">Moscow</string>
+    <string name="condition">Temperature</string>
+    <string name="description">Description</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
 </resources>

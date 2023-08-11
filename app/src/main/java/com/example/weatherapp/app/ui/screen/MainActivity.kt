@@ -2,6 +2,7 @@ package com.example.weatherapp.app.ui.screen
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isGone
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -18,6 +19,7 @@ import com.example.weatherapp.app.viewmodel.WeatherViewModelFactory
 import com.example.weatherapp.domain.model.Weather
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         ViewModelProvider(this, weatherViewModelFactory)[WeatherViewModel::class.java]
     }
 
-    private val binding by viewBinding(ActivityMainBinding::bind, R.id.ll_home)
+    private val binding by viewBinding(ActivityMainBinding::bind, R.id.fl_home)
 
     private var adapter: DaysAdapter? = null
 
@@ -60,9 +62,14 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                 viewModel.weather.collect { state ->
                     state.on(
                         loading = {
-
+                            binding.pgHome.isGone = false
+                            binding.llScreen.isGone = true
                         },
                         success = { weathers ->
+
+                            binding.pgHome.isGone = true
+                            binding.llScreen.isGone = false
+
                             val weathersForAdapter = mutableListOf<Weather>()
 
                             /*
@@ -79,7 +86,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                             weathers[0].let { weather ->
                                 val day = weather.day
                                 val condition = day.condition
-                                val humidity = day.humidity.toString()
+                                val humidity = day.humidity.roundToInt().toString()
                                 val temp = day.temp.toString()
                                 val windSpeed = day.windSpeed.toString()
                                 val description = condition.description
@@ -94,6 +101,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                             }
                         },
                         error = { throwable ->
+
+                            binding.pgHome.isGone = true
+                            binding.llScreen.isGone = false
+
                             showToast(throwable.message.toString())
                         }
                     )
