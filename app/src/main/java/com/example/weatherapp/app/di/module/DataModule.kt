@@ -23,6 +23,6 @@ class DataModule {
         WeatherRepositoryImpl(weatherApi = weatherApi)
 
     private companion object {
-        private const val BASE_URL = "http://api.weatherapi.com/v1/"
+        private const val BASE_URL = "https://api.weatherapi.com/v1/"
     }
 }

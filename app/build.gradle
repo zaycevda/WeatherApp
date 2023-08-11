@@ -44,14 +44,23 @@ android {
 
 dependencies {
     def dagger_version = "2.46.1"
+    def glide_version = "4.15.1"
+    def lifecycle_version = "2.6.1"
     def retrofit_version = "2.9.0"
 
     // dagger
     implementation "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
 
+    // glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+
     // ktx
     implementation 'androidx.core:core-ktx:1.10.1'
+
+    // lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 
     // retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"

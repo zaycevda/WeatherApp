@@ -1,7 +1,6 @@
 <resources>
 
     <!-- dynamic -->
-    <string name="city">%s</string>
     <string name="date">%s</string>
     <string name="weather_wind_speed">%s м/с</string>
     <string name="weather_temp">%s°C</string>
@@ -11,6 +10,7 @@
 
     <!-- static -->
     <string name="app_name">WeatherApp</string>
+    <string name="city">Москва</string>
     <string name="condition">Температура</string>
     <string name="description">Описание</string>
     <string name="humidity">Влажность</string>
